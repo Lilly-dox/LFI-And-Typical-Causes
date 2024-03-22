@@ -8,12 +8,12 @@ Lỗi Local File Inclusion (LFI) xảy ra khi một ứng dụng web cho phép n
   include($file)
 ?>
 ```
-Trong đoạn PHP trên , biến ``` $_GET['file]; ```lấy giá trị từ tham số file trong URL và trực tiếp dùng luôn cho include mà k filter hay kiểm duyệt gì cả 
+Trong đoạn PHP trên , biến ``` $_GET['file]; ```lấy giá trị từ tham số file trong URL và trực tiếp dùng luôn cho include() mà không filter hay kiểm duyệt gì cả 
 
 Khi URL http://example/com/script.php?file=content.php
 thì ``` $_GET['file]; ``` sẽ nhận giá trị là content.php
--> sau đó biến $file được gán gia trị la content.php
-lệnh include($file) sẽ tim file có tên content.php và oupt ra nội dung file đó
+-> sau đó biến $file được gán giá trị là content.php
+lệnh include($file) sẽ tìm file có tên content.php và output ra nội dung file đó
 -> rủi ro về việc user có thể trỏ đến bất kì file nào mà họ muốn
 
 2. Linked File Path
