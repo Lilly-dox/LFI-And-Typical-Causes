@@ -4,7 +4,7 @@ Lỗi Local File Inclusion (LFI) xảy ra khi một ứng dụng web cho phép n
 1. Dùng luôn input đầu vào và k kiểm soát để đọc filr
 ```
 <?php 
-  $file = ``` $_GET['file]; ```;
+  $file =  $_GET['file];
   include($file)
 ?>
 ```
