@@ -1,7 +1,7 @@
 # LFI-And-Typical-Causes
 Lỗi Local File Inclusion (LFI) xảy ra khi một ứng dụng web cho phép người dùng truy nhập các file hệ thống hoặc tệp tin nhạy cảm khác trên server, thông qua việc không chặn đúng cách nhập liệu từ người dùng. Đây là một số ví dụ dạng dòng code hoặc mô hình phát triển có thể gây ra lỗi LFI:
 
-1. Dùng luôn input đầu vào và k kiểm soát để đọc filr
+1. Dùng luôn input đầu vào và không kiểm soát để đọc file
 ```
 <?php 
   $file =  $_GET['file];
